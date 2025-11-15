@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
   res.send('Prisma + PostgreSQL API');
 });
 
-// post 라우트
+// post 라우트  
 app.get('/posts', (req, res) => {
   res.json(posts);
 });
@@ -73,6 +73,8 @@ app.patch('/posts/:id', (req, res) => {
 
   if (title !== undefined) post.title = title;
   if (content !== undefined) post.content = content;
+  //post.title = title ?? post.title;
+  //post.content = content ?? post.content;
 
   res.json(post);
 });

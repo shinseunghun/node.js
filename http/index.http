@@ -1,0 +1,25 @@
+### 전체 조회
+GET http://localhost:3000/posts
+
+### 단건 조회
+GET http://localhost:3000/posts/1
+
+### 생성
+POST http://localhost:3000/posts
+Content-Type: application/json
+
+{
+  "title": "새 글",
+  "content": "메모리에 저장된 게시글입니다."
+}
+
+### 수정 (title만 수정)
+PATCH http://localhost:3000/posts/1
+Content-Type: application/json
+
+{
+  "title": "수정된 제목"
+}
+
+### 삭제
+DELETE http://localhost:3000/posts/1
